@@ -11,21 +11,17 @@ if (Platform.OS !== 'ios') {
 
 axios.defaults.baseURL = url;
 
-const fakeGroupId = "58e1c9d34dc197929a3c1125";
+const fakeGroupId = "58e45bb95b5b7e0398a88bf8";
 
 class MeetupApi {
   constructor() {
     this.groupId = fakeGroupId;
     this.path = `/groups/${this.groupId}/meetups`;
   }
-  async fetchGroupMeetup() {
-    try {
-      const {data} = await axios.get(this.path);
+  fetchGroupMeetup() {
+    return axios.get(this.path).then((data) => {
       return data.meetups;
-
-    } catch (e) {
-      console.log(e);
-    }
+    });
   }
 
   async createGroupMeetups(args) {
