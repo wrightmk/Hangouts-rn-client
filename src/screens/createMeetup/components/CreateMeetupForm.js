@@ -43,7 +43,7 @@ const CreateMeetupForm = ({
     <View style={styles.buttonCreate}>
       <Button
         backgroundColor={Colors.blackBlueColor}
-        title="Create Meetup"
+        title="Create Hangout"
         raised
         fontFamily="montserrat"
         disabled={invalid || submitting}

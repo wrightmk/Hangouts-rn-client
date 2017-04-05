@@ -5,7 +5,7 @@ import styles from './styles/MyMeetupsList';
 const MyMeetupsList = ({meetups = []}) => (
   <View style={styles.root}>
     <View style={styles.titleContainer}>
-      <Text style={styles.title}>My Meetups</Text>
+      <Text style={styles.title}>My Hangouts</Text>
     </View>
     <View style={styles.contentContainer}>
        <ScrollView horizontal>
