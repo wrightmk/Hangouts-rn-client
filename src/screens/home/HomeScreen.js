@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity, Image} from 'react-native';
 import {FontAwesome, MaterialIcons} from '@expo/vector-icons';
 import {connect} from 'react-redux';
 
@@ -9,6 +9,11 @@ import {MyMeetupsList} from './components';
 import {fetchMyMeetups} from './actions';
 import styles from './styles/HomeScreen';
 import Colors from '../../../constants/Colors';
+import MapView from 'react-native-maps';
+
+// import {MapView} from 'expo';
+
+// import {CreateMeetup} from '../createMeetup/CreateMeetupScreen'
 
 
 @connect(
@@ -70,7 +75,10 @@ class HomeScreen extends Component {
     return (
       <View style={styles.root}>
         <View style={styles.topContainer}>
-          <Text>HomeScreen</Text>
+          {/* <Image source={require('./hangouts2.jpeg')}
+            style={{width: 370, height: 640}} /> */}
+          <Image source={{uri: 'http://24.media.tumblr.com/tumblr_mej8exgplo1rpgf8io1_500.png'}}
+            style={{width: 370, height: 780}} />
         </View>
         <View style={styles.bottomContainer}>
           <MyMeetupsList meetups={data} />

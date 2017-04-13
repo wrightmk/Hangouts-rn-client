@@ -15,6 +15,11 @@ const MyMeetupsList = ({meetups = []}) => (
                <Text style={styles.meetupCardTitle}>
                  {meetup.title}
                </Text>
+               <View>
+                 <Text style={styles.meetupCardDescription}>
+                   {meetup.description}
+                 </Text>
+               </View>
              </View>
 
              <View style={styles.meetupCardBottomContainer}>
@@ -22,7 +27,7 @@ const MyMeetupsList = ({meetups = []}) => (
                  {meetup.group.name}
                </Text>
                <Text style={styles.meetupCardMetaDate}>
-                 Mar 2, 6:00 p.m.
+                 {meetup.createdAt}
                </Text>
              </View>
 

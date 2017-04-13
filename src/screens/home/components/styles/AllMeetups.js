@@ -1,6 +1,6 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
 
-const styles = EStyleSheet.create({
+const styles2 = EStyleSheet.create({
   root: {
     flex: 1
   },
@@ -18,7 +18,8 @@ const styles = EStyleSheet.create({
     flex: 1
   },
   meetupCard: {
-    height: 200,
+    // flex: 0.3,
+    height: 300,
     width: 175,
     marginHorizontal: '1.5%',
     backgroundColor: '$redColor',
@@ -40,9 +41,7 @@ const styles = EStyleSheet.create({
     color: '$whiteColor',
     top: '7%',
     left: '2.5%',
-    right: '2.5%',
-    fontFamily: 'montserrat',
-    fontSize: 11,
+    fontFamily: 'montserrat'
 
   },
   meetupCardBottomContainer: {

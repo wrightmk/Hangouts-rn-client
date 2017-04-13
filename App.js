@@ -9,7 +9,6 @@ import Colors from './constants/Colors';
 import {fontAssets} from './helpers';
 import store from './src/redux/store';
 
-
 EStyleSheet.build(Colors);
 
 export default class App extends React.Component {

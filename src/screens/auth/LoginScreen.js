@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
-import {Text, View, Image} from 'react-native';
+import Expo from 'expo';
+
+import {Text, View, Image, StyleSheet} from 'react-native';
+import {Button} from 'react-native-elements';
 import imageStyle from './styles/LoginScreen';
 import styled from 'styled-components/native';
 
 import Fonts from '../../../constants/Fonts';
 import Colors from '../../../constants/Colors';
-
-//different way of styling using styled-components library
 
 
 const FlexContainerWrapper = styled.View`
@@ -33,7 +34,7 @@ const BottomButtonWrapper = styled.View`
   flex-direction: row;
 `;
 
-const Button = styled.TouchableOpacity`
+const Button2 = styled.TouchableOpacity`
   justify-content: center;
   align-items: center;
   flex: 1;
@@ -44,7 +45,7 @@ export default class LoginScreen extends Component {
   state ={}
   render() {
     return (
-      // <Image source={{uri: 'https://www.xda-developers.com/wp-content/uploads/2015/09/Mountain_Landscape_Lock_Screen_1440x2560_Samsung.jpg'}}
+      // <Image source={{uri: 'http://edmchicago.com/wp-content/uploads/2016/04/concert.jpg'}}
       //  style={{width: 370, height: 640}} >
 
         <FlexContainerWrapper color={Colors.loginbackgroundColor}>
@@ -59,6 +60,16 @@ export default class LoginScreen extends Component {
                 <Text style={Fonts.authWelcomeTitle}>Welcome!</Text>
               </FlexContainer>
 
+              <FlexContainer>
+                <View>
+                  <Button
+                    raised
+                    onPress={this.login}
+                    icon={{name: 'cached'}}
+                    title='Sign in with Facebook' />
+                </View>
+              </FlexContainer>
+
               <FlexContainer >
                 <Text style={Fonts.authWelcomeText}>
                   Start managing your <MeetupText>Hangouts</MeetupText> quickly and efficiently
@@ -68,12 +79,12 @@ export default class LoginScreen extends Component {
             </FlexContainer>
 
               <BottomButtonWrapper>
-                <Button color={Colors.signupButtonBackgroundColor}>
+                <Button2 color={Colors.signupButtonBackgroundColor}>
                   <Text style={Fonts.buttonAuth}>Sign Up</Text>
-                </Button>
-                <Button color={Colors.signinButtonBackgroundColor}>
+                </Button2>
+                <Button2 color={Colors.signinButtonBackgroundColor}>
                   <Text style={Fonts.buttonAuth}>Sign In</Text>
-                </Button>
+                </Button2>
               </BottomButtonWrapper>
 
           </FlexContainer>

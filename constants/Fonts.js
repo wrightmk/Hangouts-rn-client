@@ -2,7 +2,7 @@ import Colors from './Colors';
 
 export default {
   authTitle: {
-    fontSize: 30,
+    fontSize: 40,
     fontFamily: 'montserratBold',
     color: Colors.redColor,
     backgroundColor: 'transparent'

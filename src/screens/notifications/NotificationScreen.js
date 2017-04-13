@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {View, Text} from 'react-native';
 import {MaterialIcons} from '@expo/vector-icons';
 import Colors from '../../../constants/Colors';
+import { Components } from 'expo';
 
 class NotificationsScreen extends Component {
   static navigationOptions = {
@@ -11,7 +12,7 @@ class NotificationsScreen extends Component {
     tabBar: {
       icon: ({tintColor}) => (
         <MaterialIcons
-          name="notifications"
+          name="near-me"
           size={25}
           color={tintColor}
         />
@@ -21,9 +22,15 @@ class NotificationsScreen extends Component {
 
   render() {
     return (
-      <View style={{flex:1}}>
-        <Text>Notifications</Text>
-      </View>
+      <Components.MapView
+        style={{ flex: 1 }}
+        initialRegion={{
+          latitude: 49.2819605,
+          longitude: -123.1108491,
+          latitudeDelta: 0.0922,
+          longitudeDelta: 0.0421,
+        }}
+      />
     );
   }
 }
