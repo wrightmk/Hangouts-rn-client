@@ -1,6 +1,6 @@
-# Hangouts (front-end client)
+# Hangouts Client
 
-Is a mobile application for travellers and those new in towwn to make new friends through friendly, casual hangouts.  Users are able to create a profile and then choose to either join an existing hangout or organize their own.  
+Is a mobile application for travellers and those new in town to make new friends through friendly, casual hangouts.  Users are able to create a profile and then choose to either join an existing hangout or organize their own.  
 
 ## Tech
 
@@ -8,6 +8,4 @@ Is a mobile application for travellers and those new in towwn to make new friend
 - [Expo](https://expo.io/) - a tool that lets web developers build truly native apps that work across both iOS and Android.
 - [Redux](http://redux.js.org/) - predictable state container for Javascript apps.
 - [React Navigation](https://reactnavigation.org/) - a flexible navigation library for React Native and web.
-
--react-navigation utilizing StackNavigator to create Hangouts on the Home page and TabNavigator to change between different tabs on the application navbar
 
