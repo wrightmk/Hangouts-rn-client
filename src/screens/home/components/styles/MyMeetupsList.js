@@ -12,7 +12,8 @@ const styles = EStyleSheet.create({
   title: {
     color: '$whiteColor',
     fontSize: 25,
-    fontFamily: 'montserrat'
+    fontFamily: 'montserrat',
+    backgroundColor: 'transparent',
   },
   contentContainer: {
     flex: 1

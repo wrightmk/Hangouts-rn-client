@@ -15,7 +15,6 @@ const styles = EStyleSheet.create({
     borderRadius: 100,
     borderColor: '#fff',
     borderWidth: 4,
-    // marginTop: 30
   },
   name: {
     marginTop: 20,

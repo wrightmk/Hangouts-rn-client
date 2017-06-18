@@ -6,9 +6,9 @@ let url;
 // if (Platform.OS !== 'ios') {
 //   url = 'http://192.168.1.12:3000/api'; //codecore
 //   // url = 'http://10.0.0.22/api'; //codecore netgear
-//   // url = 'http://192.168.0.11:3000/api'; //home
+  // url = 'http://192.168.0.11:3000/api'; //home
 // } else {
-//   url = 'http://localhost:3000/api'
+  // url = 'http://localhost:3000/api'
 // }
 
 url = 'https://hangouts15.herokuapp.com/api';

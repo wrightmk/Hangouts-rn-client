@@ -8,8 +8,6 @@ import Fonts from '../../../constants/Fonts';
 import Colors from '../../../constants/Colors';
 import styles from './styles/ProfileScreen';
 
-
-
 const FlexContainerWrapper = styled.View`
   flex: 1;
   justify-content: center;
@@ -28,7 +26,7 @@ const MeetupText = styled.Text`
   fontSize: 18;
   fontFamily: montserratBold;
 `;
-//can wrap materialicons in the View(dasdas)
+
 const BottomButtonWrapper = styled.View`
   flex: 0.5;
   flex-direction: row;
@@ -37,14 +35,12 @@ const BottomButtonWrapper = styled.View`
   marginBottom: 20;
 `;
 
-
 const Button2 = styled.TouchableOpacity`
   justify-content: center;
   align-items: center;
   flex: 1;
   backgroundColor: ${({color}) => color};
 `;
-
 
 class ProfileScreen extends React.Component {
   static navigationOptions = {
@@ -61,7 +57,6 @@ class ProfileScreen extends React.Component {
       )
     },
   }
-// style={styles.buttonCreate}
   render() {
     return (
 
@@ -76,8 +71,6 @@ class ProfileScreen extends React.Component {
           </FlexContainer>
           <FlexContainer>
             <FlexContainer >
-
-              {/* <Text style={Fonts.authWelcomeTitle}>Welcome!</Text> */}
 
               <FlexContainer >
                 <Text style={Fonts.authWelcomeText}>

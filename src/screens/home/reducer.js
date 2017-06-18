@@ -14,6 +14,7 @@ const INITIAL_STATE = {
 export default (state = INITIAL_STATE, action) => {
   switch(action.type) {
     case `${FETCH_MY_MEETUPS}_PENDING`:
+    // am i mutating INITIAL_STATE here? instead something like: state = {...state, name: action.payload}
       return INITIAL_STATE;
     case `${FETCH_MY_MEETUPS}_FULFILLED`:
       return {

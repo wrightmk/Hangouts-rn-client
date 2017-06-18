@@ -1,12 +1,12 @@
-import {createStore, applyMiddleware, compose} from 'redux';
+ import {createStore, applyMiddleware, compose} from 'redux';
 import promiseMiddleware from 'redux-promise-middleware';
 import thunk from 'redux-thunk';
 
 import reducers from './reducers';
 
 const middlewares = [
-  promiseMiddleware(),
-  thunk
+  promiseMiddleware(), // not using this <--- only for default promise based reducers
+  thunk // invoke sync or async actions with `dispatch` in action
 ];
 //
 // if (__DEV__) {
