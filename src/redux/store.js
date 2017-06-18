@@ -8,11 +8,11 @@ const middlewares = [
   promiseMiddleware(), // not using this <--- only for default promise based reducers
   thunk // invoke sync or async actions with `dispatch` in action
 ];
-//
-// if (__DEV__) {
-//   const logger = require('redux-logger');
-//   middlewares.push(logger());
-// }
+
+if (__DEV__) {
+  const logger = require('redux-logger');
+  middlewares.push(logger());
+}
 
 const enhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE || compose;
 

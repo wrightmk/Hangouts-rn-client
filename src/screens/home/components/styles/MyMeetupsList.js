@@ -14,15 +14,35 @@ const styles = EStyleSheet.create({
     fontSize: 25,
     fontFamily: 'montserrat',
     backgroundColor: 'transparent',
+    shadowOpacity: 0.8,
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 2,
+      height: 3
+    },
+  },
+  space: {
+    opacity: 0,
+    backgroundColor: 'transparent'
   },
   contentContainer: {
     flex: 1
   },
   meetupCard: {
-    height: 200,
+    borderColor: 'black',
+    borderWidth: 1,
+    borderRadius: 4,
+
+    height: 180,
     width: 175,
     marginHorizontal: '1.5%',
     backgroundColor: '$redColor',
+    shadowOpacity: 0.8,
+    shadowColor: '#000000',
+    shadowOffset: {
+      width: 2,
+      height: 3
+    },
   },
   meetupCardTopContainer: {
     flex: 1,

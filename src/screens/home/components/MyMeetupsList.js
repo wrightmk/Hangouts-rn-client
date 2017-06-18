@@ -7,6 +7,9 @@ const MyMeetupsList = ({meetups = []}) => (
     <View style={styles.titleContainer}>
       <Text style={styles.title}>My Hangouts</Text>
     </View>
+    <View>
+      <Text style={styles.space}>space</Text>
+    </View>
     <View style={styles.contentContainer}>
        <ScrollView horizontal>
          {meetups.map((meetup, i) => (

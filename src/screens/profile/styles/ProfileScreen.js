@@ -3,8 +3,8 @@ import EStyleSheet from 'react-native-extended-stylesheet';
 const styles = EStyleSheet.create({
 
   profilepicWrap: {
-    width: 180,
-    height: 180,
+    width: 200,
+    height: 200,
     borderRadius: 100,
     borderColor: 'rgba(0,0,0,0.4)'
   },
