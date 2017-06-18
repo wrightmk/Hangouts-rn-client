@@ -4,7 +4,7 @@ import {MaterialIcons} from '@expo/vector-icons';
 import Colors from '../../../constants/Colors';
 import { Components } from 'expo';
 
-class NotificationsScreen extends Component {
+class MapScreen extends Component {
   static navigationOptions = {
     header: {
       style: {backgroundColor: Colors.redColor}
@@ -35,4 +35,4 @@ class NotificationsScreen extends Component {
   }
 }
 
-export default NotificationsScreen;
+export default MapScreen;

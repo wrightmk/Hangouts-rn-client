@@ -15,8 +15,6 @@ url = 'https://hangouts15.herokuapp.com/api';
 
 axios.defaults.baseURL = url;
 
-// const fakeGroupId = "58eush1c9d34dc197929a3c1125"; <-- wtf is this!!!
-// const fakeGroupId = "58e1c9d34dc197929a3c1125";
 const fakeGroupId = "58f036cb99cf980011feafa1"; // <--- use this one until user auth endpoints set up on front end
 
 class MeetupApi {
@@ -24,12 +22,6 @@ class MeetupApi {
     this.groupId = fakeGroupId;
     this.path = `/groups/${this.groupId}/meetups`;
   }
-  // fetchGroupMeetup() {
-  //   return axios.get(this.path).then((data) => {
-  //     return data.data.meetups;
-  //   });
-  // }
-  //same as below
 
   async fetchGroupMeetup() {
   try {
