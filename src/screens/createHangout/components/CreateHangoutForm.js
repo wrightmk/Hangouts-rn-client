@@ -4,12 +4,12 @@ import {Field, reduxForm} from 'redux-form';
 import {Button} from 'react-native-elements';
 
 import {TextInputWithValidations} from '../../../commons';
-import {createMeetupValidations} from '../validations';
+import {createHangoutValidations} from '../validations';
 import Colors from '../../../../constants/Colors';
-import styles from './styles/CreateMeetupForm';
+import styles from './styles/CreateHangoutForm';
 
-const CreateMeetupForm = ({
-  createMeetup,
+const CreateHangoutForm = ({
+  createHangout,
   checkTitle,
   showDateTimePicker,
   handleSubmit,
@@ -47,13 +47,13 @@ const CreateMeetupForm = ({
         raised
         fontFamily="montserrat"
         disabled={invalid || submitting}
-        onPress={handleSubmit(createMeetup)}
+        onPress={handleSubmit(createHangout)}
       />
     </View>
   </View>
 );
 
 export default reduxForm({
-  form: 'createMeetup',
-  validate: createMeetupValidations
-})(CreateMeetupForm);
+  form: 'createHangout',
+  validate: createHangoutValidations
+})(CreateHangoutForm);

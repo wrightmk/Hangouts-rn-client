@@ -1,10 +1,10 @@
-import {MeetupApi} from '../../../constants/api';
+import {HangoutApi} from '../../../constants/api';
 
-const meetupApi = new MeetupApi();
+const hangoutApi = new HangoutApi();
 
-export const FETCH_MY_MEETUPS = 'FETCH_MY_MEETUPS';
+export const FETCH_MY_HANGOUTS = 'FETCH_MY_HANGOUTS';
 
-export const fetchMyMeetups = () => ({
-  type: FETCH_MY_MEETUPS,
-  payload: meetupApi.fetchGroupMeetup()
+export const fetchMyHangouts = () => ({
+  type: FETCH_MY_HANGOUTS,
+  payload: hangoutApi.fetchGroupHangout()
 });

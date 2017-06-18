@@ -1,4 +1,4 @@
-export const createMeetupValidations = values => {
+export const createHangoutValidations = values => {
   const errors = {};
   const requiredFields = ['title', 'description'];
   const needLonger = 'Need to be longer';

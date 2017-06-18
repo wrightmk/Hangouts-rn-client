@@ -1,3 +1,3 @@
-import MyMeetupsList from './MyMeetupsList';
+import MyHangoutsList from './MyHangoutsList';
 
-export {MyMeetupsList};
+export {MyHangoutsList};

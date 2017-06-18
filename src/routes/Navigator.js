@@ -1,11 +1,11 @@
 import {StackNavigator} from 'react-navigation';
 import HomeNavigator from './HomeNavigator';
 
-import {CreateMeetupScreen} from '../screens';
+import {CreateHangoutScreen} from '../screens';
 
 export default StackNavigator({
   Home: {screen: HomeNavigator },
-  CreateMeetup: {screen: CreateMeetupScreen}
+  CreateHangout: {screen: CreateHangoutScreen}
 }, {
   mode: 'modal'
 });

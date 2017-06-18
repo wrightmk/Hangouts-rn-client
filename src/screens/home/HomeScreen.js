@@ -4,18 +4,17 @@ import {FontAwesome, MaterialIcons} from '@expo/vector-icons';
 import {connect} from 'react-redux';
 
 import {LoadingScreen} from '../../commons';
-import {MyMeetupsList} from './components';
+import {MyHangoutsList} from './components';
 
-import {fetchMyMeetups} from './actions';
+import {fetchMyHangouts} from './actions';
 import styles from './styles/HomeScreen';
 import Colors from '../../../constants/Colors';
-import MapView from 'react-native-maps';
 
 @connect(
   state => ({
-    myMeetups: state.home.myMeetups //mapstatetoprops
+    myHangouts: state.home.myHangouts //mapstatetoprops
   }),
-  {fetchMyMeetups} //mapdispatchtoprops type: etc
+  {fetchMyHangouts} //mapdispatchtoprops type: etc
 )
 
 class HomeScreen extends Component {
@@ -24,7 +23,7 @@ class HomeScreen extends Component {
       const style = {backgroundColor: Colors.redColor};
 
       const right = (
-        <TouchableOpacity style={styles.iconAdd} onPress={() => navigate('CreateMeetup')}>
+        <TouchableOpacity style={styles.iconAdd} onPress={() => navigate('CreateHangout')}>
           <MaterialIcons
             name="add-circle"
             size={30}
@@ -47,12 +46,12 @@ class HomeScreen extends Component {
   }
 
   componentDidMount() {
-    this.props.fetchMyMeetups();
+    this.props.fetchMyHangouts();
   }
 
   render() {
     const {
-      myMeetups: {
+      myHangouts: {
         isFetched,
         data,
         error
@@ -76,7 +75,7 @@ class HomeScreen extends Component {
             style={{width: 370, height: 780, opacity: 0.7}} />
         </View>
         <View style={styles.bottomContainer}>
-          <MyMeetupsList meetups={data} />
+          <MyHangoutsList hangouts={data} />
         </View>
       </View>
     );

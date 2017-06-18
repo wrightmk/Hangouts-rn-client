@@ -28,7 +28,7 @@ const styles = EStyleSheet.create({
   contentContainer: {
     flex: 1
   },
-  meetupCard: {
+  hangoutCard: {
     borderColor: 'black',
     borderWidth: 1,
     borderRadius: 4,
@@ -44,11 +44,11 @@ const styles = EStyleSheet.create({
       height: 3
     },
   },
-  meetupCardTopContainer: {
+  hangoutCardTopContainer: {
     flex: 1,
     position: 'relative'
   },
-  meetupCardTitle: {
+  hangoutCardTitle: {
     position: 'absolute',
     color: '$whiteColor',
     top: '2%',
@@ -56,7 +56,7 @@ const styles = EStyleSheet.create({
     fontFamily: 'montserratBold'
 
   },
-  meetupCardDescription: {
+  hangoutCardDescription: {
     position: 'absolute',
     color: '$whiteColor',
     top: '7%',
@@ -66,17 +66,17 @@ const styles = EStyleSheet.create({
     fontSize: 11,
 
   },
-  meetupCardBottomContainer: {
+  hangoutCardBottomContainer: {
     flex: 0.4,
     backgroundColor: '$whiteColor',
     justifyContent: 'center',
     paddingHorizontal: '2.5%'
   },
-  meetupCardMetaName: {
+  hangoutCardMetaName: {
     fontSize: 15,
     fontFamily: 'montserrat'
   },
-  meetupCardMetaDate: {
+  hangoutCardMetaDate: {
     fontSize: 13,
     fontFamily: 'montserratLight'
   }

@@ -3,6 +3,8 @@ import {View, Text} from 'react-native';
 import {MaterialIcons} from '@expo/vector-icons';
 import Colors from '../../../constants/Colors';
 import { Components } from 'expo';
+import MapView from 'react-native-maps';
+
 
 class MapScreen extends Component {
   static navigationOptions = {

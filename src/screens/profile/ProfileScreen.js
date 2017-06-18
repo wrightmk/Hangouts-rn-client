@@ -21,7 +21,7 @@ const FlexContainer = styled.View`
   align-items: center;
 `;
 
-const MeetupText = styled.Text`
+const HangoutText = styled.Text`
   color: ${Colors.redColor};
   fontSize: 18;
   fontFamily: montserratBold;
@@ -74,7 +74,7 @@ class ProfileScreen extends React.Component {
 
               <FlexContainer >
                 <Text style={Fonts.authWelcomeText}>
-                  Start managing your <MeetupText>Hangouts</MeetupText> quickly and efficiently
+                  Start managing your <HangoutText>Hangouts</HangoutText> quickly and efficiently
                 </Text>
               </FlexContainer>
 

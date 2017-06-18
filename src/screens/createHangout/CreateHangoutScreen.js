@@ -5,22 +5,22 @@ import {connect} from 'react-redux';
 import DateTimePicker from 'react-native-modal-datetime-picker';
 import moment from 'moment';
 
-import {CreateMeetupForm} from './components';
+import {CreateHangoutForm} from './components';
 import {LoadingScreen} from '../../commons';
-import {createMeetup} from './actions';
+import {createHangout} from './actions';
 import Colors from '../../../constants/Colors';
-import styles from './styles/CreateMeetupScreen';
+import styles from './styles/CreateHangoutScreen';
 
 @connect(
   state => ({
-    meetup: state.createMeetup
+    hangout: state.createHangout // mapstatetoprops
   }),
-  {createMeetup}
+  {createHangout} // mapdispatchtoprops
 )
 
-export default class CreateMeetupScreen extends Component {
+export default class CreateHangoutScreen extends Component {
   static navigationOptions = {
-    title: 'Create a new Hangout',
+    title: 'New Hangout',
     header: ({goBack}) => {
       const style = {backgroundColor: Colors.redColor};
 
@@ -70,30 +70,30 @@ export default class CreateMeetupScreen extends Component {
     return true;
   }
 
-  _createMeetup = async values => {
-    await this.props.createMeetup(values);
+  _createHangout = async values => {
+    await this.props.createHangout(values);
     this.props.navigation.goBack();
   }
 
   render(){
-    const {meetup} = this.props;
-    if(meetup.isLoading) {
+    const {hangout} = this.props;
+    if(hangout.isLoading) {
       return (
         <View style={styles.root}>
           <LoadingScreen />
         </View>
       )
-    } else if (meetup.error.on){
+    } else if (hangout.error.on){
       return (
       <View style={styles.root}>
-        <Text>{meetup.error.message}</Text>
+        <Text>{hangout.error.message}</Text>
       </View>
       );
     }
     return(
       <View style={styles.root}>
-        <CreateMeetupForm
-          createMeetup={this._createMeetup}
+        <CreateHangoutForm
+          createHangout={this._createHangout}
           showDateTimePicker={this._showDateTimePicker}
           checkTitle={this._checkTitle()}
         />

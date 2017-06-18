@@ -17,13 +17,13 @@ axios.defaults.baseURL = url;
 
 const fakeGroupId = "58f036cb99cf980011feafa1"; // <--- use this one until user auth endpoints set up on front end
 
-class MeetupApi {
+class HangoutApi {
   constructor() {
     this.groupId = fakeGroupId;
     this.path = `/groups/${this.groupId}/meetups`;
   }
 
-  async fetchGroupMeetup() {
+  async fetchGroupHangout() {
   try {
     const {data} = await axios.get(this.path);
     return data.meetups;
@@ -33,8 +33,8 @@ class MeetupApi {
   }
 }
 
-  async createGroupMeetups(args) {
-    console.log('createGroupMeetups inside function', args);
+  async createGroupHangouts(args) {
+    console.log('createGroupHangouts inside function', args);
     try {
       const res = await axios.post(`${this.path}/new`, {...args})
       console.log(res);
@@ -45,4 +45,4 @@ class MeetupApi {
   }
 }
 
-export {MeetupApi};
+export {HangoutApi};
