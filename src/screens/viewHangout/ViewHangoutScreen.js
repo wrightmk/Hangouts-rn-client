@@ -10,9 +10,20 @@ import styles from './styles/ViewHangoutScreen';
 //     hangout: state.createHangout // mapstatetoprops
 //   }),
 //   {createHangout} // mapdispatchtoprops
-// )
+
+
+// ^ create a new action/ reducer that gets hangout by id from backend
+// create backend portion that performs get try catch function
+
+// or
+
+// incorporate getAll fetch request and some how pass the props for certain id etc...
+
 
 export default class ViewHangoutScreen extends Component {
+
+
+
   static navigationOptions = {
     title: 'View Hangout',
     header: ({goBack}) => {
@@ -34,9 +45,21 @@ export default class ViewHangoutScreen extends Component {
     }//
   }
   render(){
+    const { title, description } = this.props.navigation.state.params;
+
+    // console.log('---------------');
+    // console.log(this.props);
+    // console.log('---------------');
     return (
       <View>
-        <Text>Hi Guy</Text>
+        <Text>
+          {title}
+        </Text>
+        <View>
+          <Text>
+            {description}
+          </Text>
+        </View>
       </View>
     )
   }

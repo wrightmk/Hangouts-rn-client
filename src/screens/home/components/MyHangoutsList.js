@@ -8,9 +8,13 @@ export default class MyHangoutsList extends Component {
     title: 'view'
   }
 
+  showHangout = (hangoutShow) => {
+  this.props.navigation.navigate('ViewHangout', { ...hangoutShow });
+};
+
   render() {
-    let { navigate } = this.props.navigation;
-    // console.log(this.props);
+    // let { navigate } = this.props.navigation;
+    console.log(this.props);
     const { hangouts = [] } = this.props;
 
     return (
@@ -25,7 +29,8 @@ export default class MyHangoutsList extends Component {
         <View style={styles.contentContainer}>
            <ScrollView horizontal>
              {hangouts.map((hangout, i) => (
-              <TouchableOpacity key={i} style={styles.hangoutCard} onPress={() => navigate('ViewHangout')}>
+              <TouchableOpacity key={i} style={styles.hangoutCard} onPress={() => this.showHangout(hangout)}>
+              {/* <TouchableOpacity key={i} style={styles.hangoutCard} onPress={() => navigate('ViewHangout', {hangout: 'hello')}> */}
                  <View style={styles.hangoutCardTopContainer}>
                    <Text style={styles.hangoutCardTitle}>
                      {hangout.title}
