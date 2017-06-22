@@ -1,4 +1,5 @@
 import HomeScreen from './HomeScreen';
 import HomeReducer from './reducer';
 
-export {HomeScreen, HomeReducer};
+import TestScreen from './TestScreen';
+export {HomeScreen, HomeReducer, TestScreen};

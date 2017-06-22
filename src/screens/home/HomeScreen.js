@@ -12,7 +12,8 @@ import Colors from '../../../constants/Colors';
 
 @connect(
   state => ({
-    myHangouts: state.home.myHangouts //mapstatetoprops
+    myHangouts: state.home.myHangouts, //mapstatetoprops
+
   }),
   {fetchMyHangouts} //mapdispatchtoprops type: etc
 )
@@ -32,7 +33,17 @@ class HomeScreen extends Component {
         </TouchableOpacity>
       );
 
-      return {style, right};
+      const left = (
+        <TouchableOpacity style={styles.iconAddLeft} onPress={() => navigate('ViewHangout')}>
+          <MaterialIcons
+            name="add-circle"
+            size={30}
+            color="#fff"
+          />
+        </TouchableOpacity>
+      );
+
+      return {style, right, left};
     },
     tabBar: {
       icon: ({tintColor}) => (
@@ -55,7 +66,8 @@ class HomeScreen extends Component {
         isFetched,
         data,
         error
-      }
+      },
+      navigation
     } = this.props;
     if(!isFetched) {
       return <LoadingScreen/>;
@@ -66,16 +78,17 @@ class HomeScreen extends Component {
         </View>
       );
     }
+
     return (
       <View style={styles.root}>
         <View style={styles.topContainer}>
           {/* <Image source={require('./hangouts2.jpeg')}
             style={{width: 370, height: 640}} /> */}
-          <Image source={{uri: 'http://24.media.tumblr.com/tumblr_mej8exgplo1rpgf8io1_500.png'}}
-            style={{width: 370, height: 780, opacity: 0.7}} />
+          {/* <Image source={{uri: 'http://24.media.tumblr.com/tumblr_mej8exgplo1rpgf8io1_500.png'}} */}
+            {/* style={{width: 370, height: 780, opacity: 0.7}} /> */}
         </View>
         <View style={styles.bottomContainer}>
-          <MyHangoutsList hangouts={data} />
+            <MyHangoutsList hangouts={data} navigation={navigation} />
         </View>
       </View>
     );

@@ -4,6 +4,11 @@ const styles = EStyleSheet.create({
   root: {
     flex: 1
   },
+
+  iconAddLeft: {
+    marginRight: '3%',
+  },
+
   titleContainer: {
     flex: 0.1,
     paddingHorizontal: '2.5%',

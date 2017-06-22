@@ -1,12 +1,16 @@
 import {TabNavigator} from 'react-navigation';
 import Colors from '../../constants/Colors';
 import {HomeScreen,
-        MapScreen
+        MapScreen,
+        TestScreen
        } from '../screens';
 import ProfileScreen from '../screens/profile/ProfileScreen.js';
 
 
 export default TabNavigator({
+  Test: {
+    screen: TestScreen
+  },
   Home: {
     screen: HomeScreen
   },

@@ -16,7 +16,10 @@ const styles = EStyleSheet.create({
   },
   iconAdd: {
     marginRight: '3%'
-  }
+  },
+  iconAddLeft: {
+    marginRight: '3%',
+  },
 });
 
 export default styles;
